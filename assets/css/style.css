@@ -1,0 +1,351 @@
+/* Hero Section */
+.hero-section {
+    background: url('../img/bg/hero-bg.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    background-size: 100% auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Hero Section Typing Animation */
+#hero-text::after, #hero-desc::after {
+    content: "|";
+    display: inline-block;
+    animation: blink 0.6s step-start infinite;
+    margin-left: 2px;
+}
+
+/* Kursor berkedip */
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Hero Port */
+.hero-port {
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Heading Style */
+.hero-port h1 {
+    font-size: 3rem;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-out;
+}
+
+/* Bio Style */
+.hero-port p {
+    font-size: 1.2rem;
+    margin-top: 30px;
+    color: #000000;
+    margin-bottom: 0px;
+    line-height: 1.6;
+    max-width: 600px;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Profile Picture Style */
+.hero-port img {
+    border: 2px solid #fff;
+    animation: fadeInUp 1s ease-out;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .hero-port h1 {
+        font-size: 2rem;
+    }
+    .hero-port p {
+        font-size: 1rem;
+    }
+    .hero-port img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffffff, #f5f5f5);
+    color: #000000;
+    text-decoration: none !important;
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* About Section */
+.about-section {
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    padding: 50px 0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 2.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.about-section p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-section h2:hover {
+    color: #555;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.about-section p:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Members Section */
+.members-section {
+    background-color: #f1f1f1;
+    padding: 50px 0;
+}
+
+.members-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.20);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-img-top {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    background-color: #f8f9fa;
+    border: 2px solid #414141;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3),
+                0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+.card-body {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects .card {
+    background: linear-gradient(135deg, #0d1117, #202833);
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card-text {
+    color: #000000;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.members-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col-md-4 {
+    display: flex;
+    justify-content: center;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.social-icons i {
+    margin: 0;
+}
+
+/* Skills */
+.skills-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.skill img {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+}
+
+.skill img:hover {
+    transform: rotate(15deg);
+}
+
+.skill p {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
