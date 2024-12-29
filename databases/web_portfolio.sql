@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 25, 2024 at 06:48 AM
+-- Generation Time: Dec 27, 2024 at 04:03 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -41,7 +41,8 @@ CREATE TABLE `certificates` (
 --
 
 INSERT INTO `certificates` (`id`, `user_id`, `certificate_name`, `issuer`, `date_issued`, `certificate_url`) VALUES
-(1, 1, ' Python and Statistics for Financial Analysis', 'The Hong Kong University of Science and\r\n Technology', '2024-01-21', 'coursera.pdf');
+(1, 1, ' Python and Statistics for Financial Analysis', 'The Hong Kong University of Science and\r\n Technology', '2024-01-21', 'coursera.pdf'),
+(2, 2, 'AWS Course Completion Certificate', 'AWS training and certification', '2024-05-17', 'AWS training.pdf');
 
 -- --------------------------------------------------------
 
@@ -63,8 +64,9 @@ CREATE TABLE `education` (
 
 INSERT INTO `education` (`id`, `user_id`, `school_name`, `start_year`, `end_year`) VALUES
 (1, 1, 'SMK Negeri 1 Pungging', '2019', '2023'),
-(2, 2, 'Politeknik B', '2018', '2022'),
-(3, 1, 'State University of Surabaya', '2023', '2027');
+(2, 2, 'SMA GIKI 1 Surabaya', '2019', '2023'),
+(3, 1, 'State University of Surabaya', '2023', '2027'),
+(4, 2, 'State University of Surabaya', '2023', '2027');
 
 -- --------------------------------------------------------
 
@@ -87,7 +89,7 @@ CREATE TABLE `projects` (
 
 INSERT INTO `projects` (`id`, `user_id`, `project_name`, `description`, `photo`, `url`) VALUES
 (1, 1, 'Voli Solo DulDul', 'A 3D volleyball game built with Unity, where players test their skills in performing perfect underhand passes as the ball speeds across the court. Simple, fun, and immersive—dive in and feel the game!', 'Voli.png', 'http://example.com/portfolio'),
-(2, 2, 'E-Commerce App', 'A full-stack e-commerce platform.', 'ecommerce.jpg', 'http://example.com/ecommerce');
+(2, 2, 'Penalty Game', 'Proyek ini adalah game tentang sepak bola VR, yang fokus pada tendangan penalti. Ada 2 mode: penjaga gawang atau penendang.', 'pinalti.png', 'https://drive.google.com/drive/folders/1eJu1AHSASD_IKk-HI1e3yx3FgChYezHp?usp=drive_link');
 
 -- --------------------------------------------------------
 
@@ -117,7 +119,10 @@ INSERT INTO `skills` (`id`, `user_id`, `category`, `name`, `logo_url`) VALUES
 (9, 1, 'Programming Language', 'C#', 'csharp.png'),
 (10, 1, 'Framework', 'Flask', 'flask.png'),
 (11, 1, 'Programming Language', 'mysql', 'mysql.png'),
-(12, 1, 'Operating system', 'Linux', 'linux.png');
+(12, 1, 'Operating system', 'Linux', 'linux.png'),
+(13, 2, 'Programming Language', 'Pyhton', 'python.png'),
+(14, 2, 'Programming Language', 'C#', 'csharp.png'),
+(15, 2, 'Framework', 'Laravel', 'laravel.png');
 
 -- --------------------------------------------------------
 
@@ -186,13 +191,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `certificates`
 --
 ALTER TABLE `certificates`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `education`
 --
 ALTER TABLE `education`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `projects`
@@ -204,7 +209,7 @@ ALTER TABLE `projects`
 -- AUTO_INCREMENT for table `skills`
 --
 ALTER TABLE `skills`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `users`
